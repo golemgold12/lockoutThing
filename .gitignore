@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+# Ignore vcpkg directory completely
+vcpkg/
+
+
+build/*
+
+
+!build/.gitkeep
+!build/CMakePresets.json
+!build/your_required_file.txt
