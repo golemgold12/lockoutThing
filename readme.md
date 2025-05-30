@@ -41,6 +41,7 @@ Anything else will tell the user to see the readme!
 
 Questions?
 Email me at freundl@oregonstate.edu.
+![Sequence diagram](https://github.com/user-attachments/assets/9d40a7ee-f3e3-4ba4-b134-e90f3b74d3c4)
 
 
 
