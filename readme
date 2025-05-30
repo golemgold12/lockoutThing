@@ -17,8 +17,10 @@ Here's a example...
 const std::string json_data = (a list of names, with the first two being a admin's username and password);
 curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:5023/LogProcess"); Run this via a c++ program! We are not curl scripting here.
 curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_data.c_str());
+
+
 //g++ crummytest.cpp -o crummytest -I./vcpkg/installed/x64-mingw-static/include -L./vcpkg/installed/x64-mingw-static/lib -lcurl -lws2_32 -lbcrypt -lz -lcrypt32 -lws2_32 -lwinmm -luser32 -lgdi32 -ladvapi32
-Here's all the junk i had to do to compile a test program. You probably don't need to do this. Python is recommended for testing
+Here's all the junk i had to do to compile a test program. You probably don't need to do this depending on what you use. Python is recommended for testing
 
 
 That should be read by the server program, which will parse each string into a nice little package.
@@ -35,7 +37,7 @@ This program will be listening for the following codes:
 401 - No admin credentials
 403 - Bad Password
 423 - Account is locked
-anything else- refer to this document!
+Anything else will tell the user to see the readme!
 
 Questions?
 Email me at freundl@oregonstate.edu.
