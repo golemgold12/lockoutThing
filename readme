@@ -1,5 +1,6 @@
 
-
+NOTE: This is meant to be scalable! You can write your own servers that send back response codes that line up.
+NOTE 2: Server response codes and codes sent to client are sometimes different!
 Installation:
 First, install vcpkg
 git clone https://github.com/microsoft/vcpkg.git
@@ -17,7 +18,7 @@ const std::string json_data = (a list of names, with the first two being a admin
 curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:5023/LogProcess"); Run this via a c++ program! We are not curl scripting here.
 curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_data.c_str());
 //g++ crummytest.cpp -o crummytest -I./vcpkg/installed/x64-mingw-static/include -L./vcpkg/installed/x64-mingw-static/lib -lcurl -lws2_32 -lbcrypt -lz -lcrypt32 -lws2_32 -lwinmm -luser32 -lgdi32 -ladvapi32
-Here's all the junk i had to do to compile a test program. You probably don't need to do this.
+Here's all the junk i had to do to compile a test program. You probably don't need to do this. Python is recommended for testing
 
 
 That should be read by the server program, which will parse each string into a nice little package.
@@ -34,6 +35,7 @@ This program will be listening for the following codes:
 401 - No admin credentials
 403 - Bad Password
 423 - Account is locked
+anything else- refer to this document!
 
 Questions?
 Email me at freundl@oregonstate.edu.

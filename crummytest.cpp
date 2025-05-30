@@ -34,7 +34,9 @@ int main()
 
     if (curl)
     {
-        const std::string json_data = R"(["Puppies","superAdmin1999", "testAdmin30!", "Nolan80", "MackTruck12"])"; // your first and secound string should be a admin username and password
+
+
+        const std::string json_data = R"(["Puppies","superAdmin199", "testAdmin30!", "Nolan80", "MackTruck12"])"; // your first and secound string should be a admin username and password
 
         curl_easy_setopt(curl, CURLOPT_URL, "http://localhost:5023/LogProcess");
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, json_data.c_str());
