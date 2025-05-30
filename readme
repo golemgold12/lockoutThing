@@ -25,7 +25,15 @@ That should be read by the server program, which will parse each string into a n
 SERVER SIDE:
 Compile the program with this command:
 cmake --build build
-This will create a folder called build, which will contain the program called lockupManager.exe. I'd recommend deleting the build folder for clean builds
+This will create a folder called build, which will contain the program called lockupManager.exe. I'd recommend deleting the build folder for clean builds.
+
+WHAT TO RETURN?
+This program will be listening for the following codes:
+200 - success
+400 - Account not found
+401 - No admin credentials
+403 - Bad Password
+423 - Account is locked
 
 Questions?
 Email me at freundl@oregonstate.edu.
